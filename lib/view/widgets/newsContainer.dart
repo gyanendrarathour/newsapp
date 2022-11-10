@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 class NewsContainer extends StatelessWidget {
   String imgUrl;
   String newsHead;
+  String newsCnt;
   String newsDesc;
   String newsUrl;
   NewsContainer(
       {super.key,
       required this.imgUrl,
       required this.newsHead,
+      required this.newsCnt,
       required this.newsDesc,
       required this.newsUrl});
 
@@ -38,6 +40,13 @@ class NewsContainer extends StatelessWidget {
                   newsHead,
                   style: const TextStyle(
                       fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  newsCnt,
+                  style: const TextStyle(fontSize: 12, color: Colors.grey),
                 ),
                 const SizedBox(
                   height: 10,
