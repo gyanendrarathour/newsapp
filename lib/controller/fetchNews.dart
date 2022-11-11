@@ -47,7 +47,7 @@ class FetchNews {
 
     final _newRandom = Random();
     var myArticle = articles[_newRandom.nextInt(articles.length)];
-    print(myArticle);
+    // print(myArticle);
 
     return NewsArt.fromApiToApp(myArticle);
   }
