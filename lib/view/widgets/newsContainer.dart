@@ -23,14 +23,15 @@ class NewsContainer extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.network(
-            imgUrl,
+          FadeInImage.assetNetwork(
+            placeholder: 'assets/img/bn.jpg',
+            image: imgUrl,
             height: 400,
             width: MediaQuery.of(context).size.width,
             fit: BoxFit.cover,
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -48,9 +49,11 @@ class NewsContainer extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  newsCnt.length > 250
-                      ? newsCnt.substring(0, 250)
-                      : newsCnt.toString().substring(0, newsCnt.length - 13),
+                  newsCnt != '--'
+                      ? newsCnt.length > 250
+                          ? newsCnt.substring(0, 250)
+                          : newsCnt.toString().substring(0, newsCnt.length - 13)
+                      : newsCnt,
                   style: const TextStyle(fontSize: 12, color: Colors.grey),
                 ),
                 const SizedBox(

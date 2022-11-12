@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/view/home.dart';
+import 'package:newsapp/view/widgets/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const SplashView(),
     );
   }
 }
